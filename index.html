@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./360_F_170132769_Jtkb3SNSW53kJ9R4WvDWYS3JRaT8FTuO.jpg" type="image/x-icon">
+    <title>Đăng Ký Học</title>
+  </head>
+  <style> 
+body{
+  margin: 0 auto;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+      
+    background-color:aliceblue;
+}
+    .logo {
+        background-color: rgb(93, 93, 219);
+        display: flex;
+    }
+    .wapper {
+        padding: 0 20px;
+    }
+    h1{
+        font-size: 40px;
+        color:darkblue;
+        text-align: center;
+    }
+    
+
+h2{
+    color: slateblue;
+    font-size: 30px;
+}
+h3{
+    text-align: left;
+    font-size: 40px;}
+h5
+{
+    color:#fff;
+}
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        margin: auto 200px
+        
+    }
+    .container-1 {
+        border-radius: 12px solid #ccc;
+        padding: 14px 0ppx;
+    }
+ 
+    .container-1 ul li{  
+        padding: 12px;
+        color:darkslateblue;
+    }
+    .buy {
+        border: 1px solid #ccc;
+        background-color: aliceblue;
+
+    }
+    .buy li{
+        list-style: none;
+        padding: 20px 0px;
+
+    }
+    .cart {
+      background-color: #f5f5f5;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .cart h3 {
+      margin-top: 0;
+    font-size: 20px;
+    }
+
+    .cart-items {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .cart-total {
+      margin-top: 10px;
+      text-align: right;
+    }
+
+    .total-label {
+      font-weight: bold;
+    }
+
+    .checkout-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #337ab7;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    
+  
+  button#openModalBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button#openModalBtn:hover {
+    background-color: green;
+  }
+  footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
+
+.iconss {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.iconss li {
+  margin: 0 10px;
+}
+
+.iconss li a {
+  text-decoration: none;
+}
+
+.iconss li img {
+  width: 32px;
+  height: 32px;
+}
+
+main {
+  padding-bottom: 15%;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 5px;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: green;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+
+    </style>
+<body>
+    <div class="logo">
+        <img src="./360_F_170132769_Jtkb3SNSW53kJ9R4WvDWYS3JRaT8FTuO.jpg" alt="" height="60px " width="60px" >
+        <h5>Học Để Lập Trình</h5>
+    </div>
+    <main>
+      <h1>Mở Khóa Học Cơ Bản </h1>
+      <div class="wrapper">
+        <div class="container">
+            <p>Sở hữu <i>khóa học cơ bản</i> <b><i style="color:darkslateblue">đầy đủ và chi tiết</i></b> nhất bạn có thể học online.</p>
+            <P>Có tới<b><i style="color:darkslateblue"> hàng trăm bài tập thực hành</i></b> sau mỗi bài giảng. </P> 
+            <p>Dăng kí ở dưới để mở khóa:</p>
+            <button id="openModalBtn">Đăng Ký</button>
+
+            <div id="registerModal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Đăng ký</h2>
+                <form id="registerForm">
+                  <div class="form-group">
+                    <input type="text" id="username" name="username" required>
+                    <label for="username">Họ và tên</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" id="numberphone" name="numberphone" required>
+                    <label for="numberphone">Số điện thoại</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="code" id="code" name="code" required>
+                    <label for="code">Mã code</label>
+                  </div>
+                  <button type="submit">Gửi</button>
+                </form>
+              </div>
+            </div>
+            
+            </div>
+            <div class="container-1">
+              <h2>Bạn sẽ nhận được gì ???</h2>
+              <ul class="fg">
+                <li>Truy cập toàn bộ Khóa học </li>
+                <li>Hơn 465 bài học</li>
+                <li>Hơn 469 bài tập và thử thách</li>
+                <li>Kênh hỏi đáp riêng tư</li>
+                <li>Mua một lần, học mãi mãi</li>
+              </ul>
+            </div>
+            
+          </div>
+        </main>
+    
+      <footer>
+        
+        <div class="gioithieu">
+            <ul>
+                
+                <li><a href="" class="">Hotline: +84 915718905</a></li>
+                <li><a href="" class="">Mail: nguyennguyenvh09@gmail.com</a></li>
+                <li><a href="https://goo.gl/maps/g1bditzweXwLtUgg9" class="">Đỉa chỉ: số 1-phố Xốm-Phũ lãm-Hà Đông-Hà
+                    Nội</a></li>
+                </ul>
+            </div>
+            <div class="th">
+                <ul>
+                    <li><a href="" class=""></a>Ngày thành lập: 07/05/2023</li>
+                    <li><a href="" class=""></a>Lĩnh Vực: Giáo dục, công nghệ, môi trường học tập</li>
+                </ul>
+            </div>
+            <div class="icons">
+            <ul class="iconss">
+                <li> <a class="facebook" href="http://m.me/28TechAndEdu" title="Messenger" target="_blank" rel="nofollow">
+                    <img class="img-fluid" alt="Messenger" src="./icon-mess.png"></a></li>
+                    <li><a class="zalo" href="https://zalo.me/0915718905" title="Zalo" target="_blank" rel="nofollow">
+                        <img class="img-fluid" alt="Zalo" src="./icon-zalo.png" >
+                      </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+<script>
+
+  // Lấy phần tử nút đăng ký bằng id
+  const openModalBtn = document.getElementById('openModalBtn');
+
+  // Lấy phần tử modal và phần tử nút đóng modal bằng class
+  const registerModal = document.getElementById('registerModal');
+  const closeBtn = registerModal.getElementsByClassName('close')[0];
+
+  // Xử lý sự kiện khi nút đăng ký được nhấp
+  openModalBtn.addEventListener('click', function () {
+    registerModal.style.display = 'block';
+  });
+
+  // Xử lý sự kiện khi nút đóng modal được nhấp
+  closeBtn.addEventListener('click', function () {
+    registerModal.style.display = 'none';
+  });
+
+  // Xử lý sự kiện khi click ngoài modal để đóng nó
+  window.addEventListener('click', function (event) {
+    if (event.target == registerModal) {
+      registerModal.style.display = 'none';
+    }
+  });
+
+  // Xử lý sự kiện khi submit form đăng ký
+  const registerForm = document.getElementById('registerForm');
+  registerForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    // Thực hiện xử lý đăng ký tại đây
+    // ...
+    alert('Đăng ký thành công!');
+    registerForm.reset();
+    registerModal.style.display = 'none';
+  });
+
+
+
+</script>
+  
+</html>
